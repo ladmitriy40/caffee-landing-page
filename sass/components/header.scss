@@ -1,0 +1,46 @@
+header {
+  display: flex;
+  justify-content: center;
+  height: 110px;
+  padding: 0 80px 0;
+}
+.menu {
+  width: $content-width;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.menu-ul {
+  width: 392px;
+  display: flex;
+  justify-content: space-between;
+}
+.menu-ul_account__links {
+  width: 175px;
+}
+.menu-link:hover {
+  color: #bd9339;
+}
+a.menu-signup_link {
+  display: block;
+  text-align: center;
+  width: 100px;
+  height: 45px;
+  color: #fff;
+  background-color: #000000;
+  border-radius: 15px;
+  line-height: 38px;
+}
+a.menu-signup_link:hover {
+  color: #bd9339;
+  box-shadow: 3px 3px 5px rgba(211, 185, 185, 0.781);
+}
+.menu-logo {
+  @include font-settings(36px, 500, #000000);
+  text-transform: uppercase;
+}
+.menu-link {
+  @include font-settings(24px, 300, #000000);
+  text-transform: uppercase;
+}
