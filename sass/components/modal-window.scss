@@ -11,7 +11,7 @@
   align-items: center;
   box-shadow: 0 40px 60px rgba(0, 0, 0, 0.7);
   transition: all 0.5s;
-  z-index: 1000;
+  z-index: 0;
 }
 .btn-close_modal-window {
   width: 25px;
@@ -60,8 +60,9 @@
   transition: all 0.5s;
   backdrop-filter: blur(4px);
   background-color: rgba(0, 0, 0, 0.6);
-  z-index: 100;
+  z-index: 0;
 }
 .hidden {
+  visibility: hidden;
   opacity: 0;
 }

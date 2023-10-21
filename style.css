@@ -130,6 +130,7 @@ header {
   width: 392px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .menu-ul_account__links {
@@ -148,12 +149,13 @@ a.menu-signup_link {
   color: #fff;
   background-color: #000000;
   border-radius: 15px;
-  line-height: 38px;
+  line-height: 45px;
 }
 
 a.menu-signup_link:hover {
   color: #bd9339;
   box-shadow: 3px 3px 5px rgba(211, 185, 185, 0.781);
+  transition: all 0.3s;
 }
 
 .menu-logo {
@@ -364,6 +366,7 @@ a.menu-signup_link:hover {
   background-color: #000;
   color: #fff;
   box-shadow: 3px 3px 5px rgb(218, 208, 208);
+  transition: all 0.3s;
 }
 
 .footer-copyright {
@@ -390,7 +393,7 @@ a.menu-signup_link:hover {
   align-items: center;
   box-shadow: 0 40px 60px rgba(0, 0, 0, 0.7);
   transition: all 0.5s;
-  z-index: 1000;
+  z-index: 0;
 }
 
 .btn-close_modal-window {
@@ -452,10 +455,11 @@ a.menu-signup_link:hover {
   transition: all 0.5s;
   backdrop-filter: blur(4px);
   background-color: rgba(0, 0, 0, 0.6);
-  z-index: 100;
+  z-index: 0;
 }
 
 .hidden {
+  visibility: hidden;
   opacity: 0;
 }
 
