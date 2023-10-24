@@ -11,9 +11,9 @@
   align-items: center;
   box-shadow: 0 40px 60px rgba(0, 0, 0, 0.7);
   transition: all 0.5s;
-  z-index: 0;
+  z-index: 1000;
 }
-.btn-close_modal-window {
+.close_modal-window {
   width: 25px;
   height: 25px;
   margin: 15px 0 15px 440px;
@@ -39,11 +39,11 @@
   border: 2px solid rgba(83, 71, 71, 0.863);
   border-radius: 5px;
 }
-.modal-input:focus {
+.modal-input:enabled {
   text-align: center;
   border: 2px solid black;
 }
-.btn-submit_modal-window {
+.submit_modal-window {
   background-color: black;
   margin-top: 30px;
   width: 130px;
@@ -60,9 +60,38 @@
   transition: all 0.5s;
   backdrop-filter: blur(4px);
   background-color: rgba(0, 0, 0, 0.6);
-  z-index: 0;
+  z-index: 100;
 }
 .hidden {
   visibility: hidden;
   opacity: 0;
+  // display: none;
+}
+
+.modal-window_subscribe {
+  background-color: rgb(112, 83, 83);
+  width: 800px;
+  height: 300px;
+  top: 25%;
+  left: 30%;
+  box-shadow: 0 40px 60px rgba(0, 0, 0, 0.7);
+  transition: all 0.5s;
+  z-index: 1000;
+}
+.close_modal-window_subscribe {
+  margin: 15px 0 15px 740px;
+}
+.modal-window_subscribe-header {
+  @include font-settings(30px, 300, white);
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+.modal-window_subscribe-text {
+  @include font-settings(20px, 300, white);
+  line-height: 40px;
+  text-align: center;
+  .highlight {
+    @include font-settings(24px, 500, bisque);
+    line-height: 75px;
+  }
 }

@@ -10,6 +10,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
+    <script defer src="script.js"></script>
     <title>Document</title>
   </head>
   <body>
@@ -35,7 +36,11 @@
             <a class="menu-link menu-login_link" href="#">login</a>
           </li>
           <li class="menu-li">
-            <a class="menu-link menu-signup_link" href="#">sign up</a>
+            <a
+              class="menu-link menu-signup_link show-modal-window_sign-up"
+              href="#"
+              >sign up</a
+            >
           </li>
         </ul>
       </nav>
@@ -115,7 +120,10 @@
             class="footer-email"
             placeholder="enter your email"
           />
-          <button class="footer-submit" type="submit" value="submit">
+          <button
+            class="footer-submit show-modal-window_subscribe"
+            type="submit"
+          >
             submit
           </button>
         </form>
@@ -124,8 +132,8 @@
         <p class="copyright-title">© COPYRIGHT 2021</p>
       </div>
     </footer>
-    <div class="modal-window hidden">
-      <button class="btn-close_modal-window">×</button>
+    <div class="modal-window modal-window_sign-up hidden">
+      <button class="close_modal-window close_modal-window_sign-up">×</button>
       <h2 class="modal-header">Create your account</h2>
       <form class="modal-form">
         <label class="modal-label label-email">Email</label>
@@ -134,8 +142,23 @@
         <input type="password" class="modal-input input-password" />
         <label class="modal-label label-nickname">Nickname</label>
         <input type="text" class="modal-input input-nickname" />
-        <button type="submit" class="btn-submit_modal-window">Submit</button>
+
+        <button class="submit_modal-window submit-sipn-up" type="submit">
+          Submit
+        </button>
       </form>
+    </div>
+    <div class="modal-window modal-window_subscribe hidden">
+      <button class="close_modal-window close_modal-window_subscribe">×</button>
+      <h2 class="modal-window_subscribe-header">
+        THANK YOU FOR YOUR SUBSCRIBE!
+      </h2>
+      <p class="modal-window_subscribe-text">
+        We thank you for subscribing to our updates!<br />
+        Soon you will receive an email with a promo code for a 25% discount on
+        your first cup of coffee!<br />
+        <span class="highlight">Have a nice coffee!</span>
+      </p>
     </div>
     <div class="overlay hidden"></div>
   </body>

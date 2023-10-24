@@ -78,7 +78,7 @@ input::-ms-clear {
 }
 
 button,
-input[type=submit] {
+input[type='submit'] {
   display: inline-block;
   box-shadow: none;
   background-color: transparent;
@@ -107,7 +107,7 @@ legend {
 }
 
 body {
-  font-family: "Oswald", sans-serif;
+  font-family: 'Oswald', sans-serif;
   align-items: center;
 }
 
@@ -115,7 +115,6 @@ header {
   display: flex;
   justify-content: center;
   height: 110px;
-  padding: 0 80px 0;
 }
 
 .menu {
@@ -185,7 +184,7 @@ a.menu-signup_link:hover {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-image: url("images/photo-1494415859740-21e878dd929d.jpg");
+  background-image: url('images/photo-1494415859740-21e878dd929d.jpg');
   background-size: 1440px 800px;
 }
 
@@ -393,10 +392,10 @@ a.menu-signup_link:hover {
   align-items: center;
   box-shadow: 0 40px 60px rgba(0, 0, 0, 0.7);
   transition: all 0.5s;
-  z-index: 0;
+  z-index: 1000;
 }
 
-.btn-close_modal-window {
+.close_modal-window {
   width: 25px;
   height: 25px;
   margin: 15px 0 15px 440px;
@@ -430,12 +429,12 @@ a.menu-signup_link:hover {
   border-radius: 5px;
 }
 
-.modal-input:focus {
+.modal-input:enabled {
   text-align: center;
   border: 2px solid black;
 }
 
-.btn-submit_modal-window {
+.submit_modal-window {
   background-color: black;
   margin-top: 30px;
   width: 130px;
@@ -455,12 +454,49 @@ a.menu-signup_link:hover {
   transition: all 0.5s;
   backdrop-filter: blur(4px);
   background-color: rgba(0, 0, 0, 0.6);
-  z-index: 0;
+  z-index: 100;
 }
 
 .hidden {
   visibility: hidden;
   opacity: 0;
+}
+
+.modal-window_subscribe {
+  background-color: rgb(112, 83, 83);
+  width: 800px;
+  height: 300px;
+  top: 25%;
+  left: 30%;
+  box-shadow: 0 40px 60px rgba(0, 0, 0, 0.7);
+  transition: all 0.5s;
+  z-index: 1000;
+}
+
+.close_modal-window_subscribe {
+  margin: 15px 0 15px 740px;
+}
+
+.modal-window_subscribe-header {
+  font-size: 30px;
+  font-weight: 300;
+  color: white;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+
+.modal-window_subscribe-text {
+  font-size: 20px;
+  font-weight: 300;
+  color: white;
+  line-height: 40px;
+  text-align: center;
+}
+.modal-window_subscribe-text .highlight {
+  font-size: 24px;
+  font-weight: 500;
+  color: bisque;
+  line-height: 75px;
 }
 
 /*# sourceMappingURL=style.css.map */
