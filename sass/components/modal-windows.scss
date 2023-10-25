@@ -47,9 +47,16 @@
   background-color: black;
   margin-top: 30px;
   width: 130px;
-  height: 50px;
+  height: 55px;
   @include font-settings(20, 500, white);
   text-transform: uppercase;
+}
+
+.label-email_login {
+  margin-top: 30px;
+}
+.submit-login {
+  margin-top: 50px;
 }
 .overlay {
   width: 100%;
