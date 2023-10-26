@@ -1,4 +1,6 @@
 'use strict';
+// Modal windows
+// Мariables
 const modalWindowSignUp = document.querySelector('.modal-window_sign-up');
 const btnShowModalWindowSignUp = document.querySelector(
   '.show-modal-window_sign-up'
@@ -20,6 +22,8 @@ const footerEmail = document.querySelector('.footer-email');
 
 const modalWindowInputs = document.querySelectorAll('.modal-input');
 const overlay = document.querySelector('.overlay');
+
+// Functions
 
 // Refactoring with bind method
 
@@ -59,6 +63,8 @@ const emailCorrectionCheck = function (
 //   overlay.classList.add('hidden');
 // };
 
+// Sign Up modal window
+
 btnShowModalWindowSignUp.addEventListener('click', function () {
   // login/password/nickname correction check, nickname saving and signed up page needed
   removeHiddenClass(modalWindowSignUp, overlay);
@@ -69,6 +75,8 @@ btnCloseModalWindowSignUp.addEventListener(
 );
 overlay.addEventListener('click', addHiddenClass.bind(modalWindowSignUp));
 
+// Login modal window
+
 btnShowModalWindowLogin.addEventListener('click', function () {
   // login/password correction check and loged in window needed
   removeHiddenClass(modalWindowLogin, overlay);
@@ -78,6 +86,9 @@ btnCloseModalWindowLogin.addEventListener(
   addHiddenClass.bind(modalWindowLogin)
 );
 overlay.addEventListener('click', addHiddenClass.bind(modalWindowLogin));
+
+// Subscribe modal window
+
 btnShowModalWindowSubscribe.addEventListener('click', function (e) {
   e.preventDefault();
   emailCorrectionCheck(modalWindowSubscribe, footerEmail, overlay);
@@ -88,3 +99,35 @@ btnCloseModalWindowSubscribe.addEventListener(
   addHiddenClass.bind(modalWindowSubscribe)
 );
 overlay.addEventListener('click', addHiddenClass.bind(modalWindowSubscribe));
+
+///////////////////////////////////////////////////////////////
+
+// Smoth scrolling
+// Variables
+
+const btnHome = document.querySelector('.home-link');
+
+const btnStory = document.querySelector('.story-link');
+const btnBlog = document.querySelector('.blog-link');
+const btnSubscribe = document.querySelector('.subscribe-link');
+
+const sectionHome = document.querySelector('#section-1');
+
+const sectionStory = document.querySelector('#section-2');
+const sectionBlog = document.querySelector('#section-3');
+const sectionSubscribe = document.querySelector('.footer-subscribe');
+
+// Functions
+
+const PageScrolling = function (e) {
+  e.preventDefault();
+  this.scrollIntoView({ behavior: 'smooth' });
+};
+
+btnHome.addEventListener('click', PageScrolling.bind(sectionHome));
+
+btnStory.addEventListener('click', PageScrolling.bind(sectionStory));
+
+btnBlog.addEventListener('click', PageScrolling.bind(sectionBlog));
+
+btnSubscribe.addEventListener('click', PageScrolling.bind(sectionSubscribe));
