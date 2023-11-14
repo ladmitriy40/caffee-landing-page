@@ -10,42 +10,49 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
+    <script defer src="script.js"></script>
     <title>Document</title>
   </head>
   <body>
     <header class="header">
       <nav class="menu">
-        <p class="menu-logo">coffe house</p>
-        <ul class="menu-ul">
+        <p class="menu-logo">coffee house</p>
+        <ul class="menu-ul ul-nav_links">
           <li class="menu-li">
-            <a class="menu-link" href="#">home</a>
+            <a class="menu-link nav-link home-link" href="#section-1">home</a>
           </li>
           <li class="menu-li">
-            <a class="menu-link" href="#">story</a>
+            <a class="menu-link nav-link story-link" href="#section-2">story</a>
           </li>
           <li class="menu-li">
-            <a class="menu-link" href="#">blog</a>
+            <a class="menu-link nav-link blog-link" href="#section-3">blog</a>
           </li>
           <li class="menu-li">
-            <a class="menu-link" href="#">subscribe</a>
+            <a class="menu-link nav-link subscribe-link" href="#footer"
+              >subscribe</a
+            >
           </li>
         </ul>
         <ul class="menu-ul menu-ul_account__links">
           <li class="menu-li">
-            <a class="menu-link menu-login_link" href="#">login</a>
+            <a class="menu-link reg-link menu-login_link" href="#">login</a>
           </li>
           <li class="menu-li">
-            <a class="menu-link menu-signup_link" href="#">sign up</a>
+            <a
+              class="menu-link reg-link menu-signup_link show-modal-window_sign-up"
+              href="#"
+              >sign up</a
+            >
           </li>
         </ul>
       </nav>
     </header>
     <main class="main">
-      <div class="section-1">
+      <div class="section-1" id="section-1">
         <p class="setion-1_title">take your time</p>
         <div class="section-1_line"></div>
       </div>
-      <div class="section-2">
+      <div class="section-2" id="section-2">
         <h2 class="setion-2_title">story</h2>
         <div class="section-2_content">
           <img
@@ -64,7 +71,7 @@
           </p>
         </div>
       </div>
-      <div class="section-3">
+      <div class="section-3" id="section-3">
         <h2 class="section-3_title">blog</h2>
         <div class="section-3_cards">
           <div class="card card-1">
@@ -106,7 +113,7 @@
         </div>
       </div>
     </main>
-    <footer class="footer">
+    <footer class="footer" id="footer">
       <div class="footer-subscribe">
         <h2 class="subscribe-header">subscribe</h2>
         <form class="footer-form">
@@ -115,7 +122,10 @@
             class="footer-email"
             placeholder="enter your email"
           />
-          <button class="footer-submit" type="submit" value="submit">
+          <button
+            class="footer-submit show-modal-window_subscribe"
+            type="submit"
+          >
             submit
           </button>
         </form>
@@ -124,5 +134,52 @@
         <p class="copyright-title">© COPYRIGHT 2021</p>
       </div>
     </footer>
+    <div class="modal-window modal-window_sign-up hidden">
+      <button class="close_modal-window close_modal-window_sign-up">×</button>
+      <h2 class="modal-header">Create your account</h2>
+      <form class="modal-form">
+        <label class="modal-label label-email">Email</label>
+        <input type="email" class="modal-input input-email" />
+        <label class="modal-label label-password">Password</label>
+        <input type="password" class="modal-input input-password" />
+        <label class="modal-label label-nickname">Nickname</label>
+        <input type="text" class="modal-input input-nickname" />
+
+        <button class="submit_modal-window submit-sipn-up" type="submit">
+          Submit
+        </button>
+      </form>
+    </div>
+    <div class="modal-window modal-window_login hidden">
+      <button class="close_modal-window close_modal-window_login">×</button>
+      <h2 class="modal-header">Login</h2>
+      <form class="modal-form">
+        <label class="modal-label label-email label-email_login"
+          >Enter your Email</label
+        >
+        <input type="email" class="modal-input input-email" />
+        <label class="modal-label label-password label-password-login"
+          >Enter your Password</label
+        >
+        <input type="password" class="modal-input input-password" />
+
+        <button class="submit_modal-window submit-login" type="submit">
+          Submit
+        </button>
+      </form>
+    </div>
+    <div class="modal-window modal-window_subscribe hidden">
+      <button class="close_modal-window close_modal-window_subscribe">×</button>
+      <h2 class="modal-window_subscribe-header">
+        THANK YOU FOR YOUR SUBSCRIBE!
+      </h2>
+      <p class="modal-window_subscribe-text">
+        We thank you for subscribing to our updates!<br />
+        Soon you will receive an email with a promo code for a 25% discount on
+        your first cup of coffee!<br />
+        <span class="highlight">Have a nice coffee!</span>
+      </p>
+    </div>
+    <div class="overlay hidden"></div>
   </body>
 </html>
