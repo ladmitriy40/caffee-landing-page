@@ -105,29 +105,53 @@ overlay.addEventListener('click', addHiddenClass.bind(modalWindowSubscribe));
 // Smoth scrolling
 // Variables
 
-const btnHome = document.querySelector('.home-link');
+// Refactoring with event delegation (all commented part is interpritation without event delegation)
 
-const btnStory = document.querySelector('.story-link');
-const btnBlog = document.querySelector('.blog-link');
-const btnSubscribe = document.querySelector('.subscribe-link');
+// const btnHome = document.querySelector('.home-link');
 
-const sectionHome = document.querySelector('#section-1');
+// const btnStory = document.querySelector('.story-link');
+// const btnBlog = document.querySelector('.blog-link');
+// const btnSubscribe = document.querySelector('.subscribe-link');
 
-const sectionStory = document.querySelector('#section-2');
-const sectionBlog = document.querySelector('#section-3');
-const sectionSubscribe = document.querySelector('.footer-subscribe');
+// const navBtns = document.querySelectorAll('.nav-link');
+
+const menu = document.querySelector('.ul-nav_links');
+
+// const sectionHome = document.querySelector('#section-1');
+
+// const sectionStory = document.querySelector('#section-2');
+// const sectionBlog = document.querySelector('#section-3');
+// const sectionSubscribe = document.querySelector('.footer-subscribe');
 
 // Functions
 
-const PageScrolling = function (e) {
-  e.preventDefault();
-  this.scrollIntoView({ behavior: 'smooth' });
-};
+// const PageScrolling = function (e) {
+//   e.preventDefault();
+//   this.scrollIntoView({ behavior: 'smooth' });
+// };
 
-btnHome.addEventListener('click', PageScrolling.bind(sectionHome));
+// Smooth scrolling logics
 
-btnStory.addEventListener('click', PageScrolling.bind(sectionStory));
+// btnHome.addEventListener('click', PageScrolling.bind(sectionHome));
 
-btnBlog.addEventListener('click', PageScrolling.bind(sectionBlog));
+// btnStory.addEventListener('click', PageScrolling.bind(sectionStory));
 
-btnSubscribe.addEventListener('click', PageScrolling.bind(sectionSubscribe));
+// btnBlog.addEventListener('click', PageScrolling.bind(sectionBlog));
+
+// btnSubscribe.addEventListener('click', PageScrolling.bind(sectionSubscribe));
+
+// navBtns.forEach(function (link) {
+//   link.addEventListener('click', function (e) {
+//     e.preventDefault();
+//     const href = this.getAttribute('href');
+//     document.querySelector(href).scrollIntoView({ behavior: 'smooth' });
+//   });
+// });
+
+menu.addEventListener('click', function (e) {
+  if (e.target.classList.contains('nav-link')) {
+    e.preventDefault();
+    const href = e.target.getAttribute('href');
+    document.querySelector(href).scrollIntoView({ behavior: 'smooth' });
+  }
+});
